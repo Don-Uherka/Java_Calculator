@@ -4,10 +4,7 @@ public class Runner {
 	
 	public static void main(String[] args) {
 		
-		Add(15,18);
-		Subtract(10,5);
-		Multiply(23,100);
-		Divide(50,2);
+		Divide(1,10);
 	}
 	
 	
@@ -40,6 +37,14 @@ public class Runner {
 		double value1 = input1;
 		double value2 = input2;
 		double result = value1 / value2;
+		if(value1 < value2) {
+			System.out.println(result);
+			return(result);
+		}
+		else if(value1 > value2) {
+			System.out.println("this division could not be performed");
+		}
+		
 		System.out.println(result);
 		return(result);
 	}
