@@ -6,6 +6,7 @@ public class string_practice {
 		// TODO Auto-generated method stub
 		strings();
 		subString();
+		stringCounter();
 
 	}
 
@@ -21,5 +22,9 @@ public class string_practice {
 		String substring = x.substring(0, 11);
 		String substring2 = y.substring(16, 24);
 		System.out.println(substring.toUpperCase() + substring2.toUpperCase());
+	}
+	public static void stringCounter() {
+		String w = "Hello World";
+		System.out.print(w);
 	}
 }
