@@ -5,7 +5,8 @@ public class string_practice {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//System.out.println(numOfWords("Hello this is a string"));
-		printVertically();
+		//printVertically();
+		printReversed("Hello this is a string");
 
 	}
 
@@ -62,4 +63,22 @@ public class string_practice {
 			}
 		}
 	}
+	
+	public static void printReversed(String s) {
+		String currentWord = "";
+		
+		for (int i = s.length() - 1; i >= 0; i--) {
+			String currentChar = s.substring(i, i + 1);
+			
+			if (currentChar.equals(" ")) {
+				System.out.println(currentWord);
+				currentWord = "";
+			} else {
+				currentWord = currentChar + currentWord;
+			}
+			
+	}
+		System.out.println(currentWord);
+		
+}
 }
