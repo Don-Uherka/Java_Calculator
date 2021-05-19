@@ -9,6 +9,7 @@ public class Number {
 	
 	public static void AddNumber() {
 	
+		
 	}
 
 }
