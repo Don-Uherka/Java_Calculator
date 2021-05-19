@@ -4,9 +4,8 @@ public class string_practice {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		strings();
-		subString();
-		stringCounter();
+		//System.out.println(numOfWords("Hello this is a string"));
+		printVertically();
 
 	}
 
@@ -26,5 +25,41 @@ public class string_practice {
 	public static void stringCounter() {
 		String w = "Hello World";
 		System.out.print(w);
+	}
+	
+	public static int numOfWords(String s) {
+		if (s.length() == 0) return 0;
+		int words = 1;
+		
+		for(int i = 0; i < s.length(); i++) {
+			String current = s.substring(i, i + 1);
+			
+			if (current.equals(" ")) {
+				words++;
+			}
+		}
+		return words;
+	}
+	
+	public static void printVertically() {
+		
+		String testString = "Hello World this is a string";
+		
+		int wordLengthCount = 0;
+		
+		for(int i = 0; i < testString.length(); i++) {
+			
+			String spaceCheck = testString.substring(i, i + 1);
+			
+			if (spaceCheck.equals(" ")) {
+				
+				
+				System.out.println(testString.substring(i - wordLengthCount, i));
+				
+				wordLengthCount = 0;
+			} else {
+				wordLengthCount++;
+			}
+		}
 	}
 }
